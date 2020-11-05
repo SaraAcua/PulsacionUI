@@ -8,7 +8,7 @@ namespace DAL
 {
     public class PersonaRepository
     {
-        private readonly string FileName = "Perona.txt";
+        private readonly string FileName = "Persona.txt";
         public void Guardar(Persona persona)
         {
             FileStream file = new FileStream(FileName, FileMode.Append);
@@ -132,8 +132,8 @@ namespace DAL
 
             leer.Close();
             escribir.Close();
-            File.Delete("Perona.txt");
-            File.Move("Temp.txt", "Perona.txt");
+            File.Delete("Persona.txt");
+            File.Move("Temp.txt", "Persona.txt");
             File.Delete("Temp.txt");
 
             if (encontrado == false)
