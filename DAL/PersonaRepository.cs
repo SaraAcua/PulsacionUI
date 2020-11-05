@@ -132,9 +132,9 @@ namespace DAL
 
             leer.Close();
             escribir.Close();
-            File.Delete("Persona.txt");
-            File.Move("Temporal.txt", "Persona.txt");
-            File.Delete("Temporal.txt");
+            File.Delete("Perona.txt");
+            File.Move("Temp.txt", "Perona.txt");
+            File.Delete("Temp.txt");
 
             if (encontrado == false)
             {
