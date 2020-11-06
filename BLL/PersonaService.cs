@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using DAL;
 using Entity;
@@ -151,7 +152,20 @@ namespace BLL
             return new ConsultaPersonaResponse("Error de Aplicacion: " + e.Message);
         }
     }
+
+        public int ContarSexo(string sexo)
+        {
+            int conteo = 0;
+            conteo = personaRepository.ContarSexo(sexo);
+            return conteo;
+        }
+
+
+    
+
 }
+
+
 
 public class PersonaResponse 
     {

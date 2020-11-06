@@ -108,7 +108,7 @@
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
             this.dataGEliminar.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGEliminar.Size = new System.Drawing.Size(573, 262);
+            this.dataGEliminar.Size = new System.Drawing.Size(489, 213);
             this.dataGEliminar.TabIndex = 4;
             this.dataGEliminar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGEliminar_CellContentClick);
             // 

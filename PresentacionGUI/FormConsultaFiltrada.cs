@@ -31,15 +31,32 @@ namespace PresentacionGUI
         private void BtnConsultarFiltro_Click(object sender, EventArgs e)
         {
            
+
             if (cmboSexo.Text.Equals("Todos"))
             {
                 ConsultarTodos();
+                lblConteo.Text = "----";
             }
             else
             {
                 ConsultaConFiltroSexo();
+                ContarSexo();
             }
+          
             
+        }
+        private void ContarSexo()
+        {
+            int cantidad = 0;
+            cantidad = service.ContarSexo(cmboSexo.Text);
+            if (cantidad != 0)
+            {
+                lblConteo.Text = "" + cantidad;
+            }else
+            {
+                lblConteo.Text = "0";
+                MessageBox.Show("No existen registros : "  +cmboSexo.Text,"informacion",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
 
