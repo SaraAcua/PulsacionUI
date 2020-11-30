@@ -158,5 +158,10 @@ namespace PresentacionGUI
         {
             AbrirFormEnPanel(new FrmEditar());
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Probar_conexion());
+        }
     }
 }

@@ -98,5 +98,10 @@ namespace PresentacionGUI
         {
 
         }
+
+        private void TxtIdEliminar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

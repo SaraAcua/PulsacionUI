@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.btnConsultaFiltrada = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@
             // 
             this.MenuVertical.AutoScroll = true;
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(37)))), ((int)(((byte)(86)))));
+            this.MenuVertical.Controls.Add(this.button4);
             this.MenuVertical.Controls.Add(this.btnConsultaFiltrada);
             this.MenuVertical.Controls.Add(this.button3);
             this.MenuVertical.Controls.Add(this.button2);
@@ -62,8 +64,26 @@
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(230, 472);
+            this.MenuVertical.Size = new System.Drawing.Size(235, 472);
             this.MenuVertical.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(23, 315);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(201, 40);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "       Probar conexion";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnConsultaFiltrada
             // 
@@ -161,9 +181,9 @@
             this.PanelTitulo.Controls.Add(this.pictureBox1);
             this.PanelTitulo.Controls.Add(this.MenuPicture);
             this.PanelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTitulo.Location = new System.Drawing.Point(230, 0);
+            this.PanelTitulo.Location = new System.Drawing.Point(235, 0);
             this.PanelTitulo.Name = "PanelTitulo";
-            this.PanelTitulo.Size = new System.Drawing.Size(550, 36);
+            this.PanelTitulo.Size = new System.Drawing.Size(545, 36);
             this.PanelTitulo.TabIndex = 2;
             this.PanelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitulo_MouseDown);
             // 
@@ -197,9 +217,9 @@
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelContenedor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PanelContenedor.Location = new System.Drawing.Point(230, 36);
+            this.PanelContenedor.Location = new System.Drawing.Point(235, 36);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(550, 436);
+            this.PanelContenedor.Size = new System.Drawing.Size(545, 436);
             this.PanelContenedor.TabIndex = 3;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
             // 
@@ -254,6 +274,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnConsultaFiltrada;
+        private System.Windows.Forms.Button button4;
     }
 }
 

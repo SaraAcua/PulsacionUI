@@ -12,12 +12,12 @@ namespace BLL
         {
             personaRepository = new PersonaRepository();
         }
-        
+
         public string Guardar(Persona persona)
         {
             try
             {
-               
+
                 if (personaRepository.Buscar(persona.Identificacion) == null)
                 {
                     personaRepository.Guardar(persona);
@@ -59,26 +59,26 @@ namespace BLL
         {
             PersonaResponse personaResponse;
             try
-            {            
+            {
                 Persona persona = personaRepository.Buscar(identificacion);
                 if (persona != null)
                 {
-                   return personaResponse = new PersonaResponse(persona);
+                    return personaResponse = new PersonaResponse(persona);
                 }
                 else
                 {
                     return personaResponse = new PersonaResponse("La Persona buscada no se encuentra Registrada");
                 }
-                
+
             }
             catch (Exception e)
             {
 
-                return personaResponse = new PersonaResponse("Error de Aplicacion: "+e.Message);
+                return personaResponse = new PersonaResponse("Error de Aplicacion: " + e.Message);
             }
-            
+
         }
-        public  ConsultaPersonaResponse ConsultarTodos()
+        public ConsultaPersonaResponse ConsultarTodos()
         {
 
             ConsultaPersonaResponse personaResponse;
@@ -86,7 +86,7 @@ namespace BLL
             {
                 List<Persona> personas = personaRepository.ConsultarTodos();
                 if (personas != null)
-                { 
+                {
                     return personaResponse = new ConsultaPersonaResponse(personas);
                 }
                 else
@@ -104,7 +104,7 @@ namespace BLL
         public string Modificar(string identificacion, string nombre, int edad, string sexo)
         {
             PersonaRepository personaRepository = new PersonaRepository();
-            return personaRepository.ModificarUsuario(identificacion,nombre, edad, sexo);
+            return personaRepository.ModificarUsuario(identificacion, nombre, edad, sexo);
         }
         public ConsultaPersonaResponse ConsultarNombre(string nombre)
         {
@@ -131,27 +131,27 @@ namespace BLL
         }
 
         public ConsultaPersonaResponse ConsultarPorSexo(string sexo)
-    {
-
-        try
-        {
-            List<Persona> personas = personaRepository.FiltrarSexo(sexo);
-            if (personas != null)
-            {
-                return new ConsultaPersonaResponse(personas);
-            }
-            else
-            {
-                return new ConsultaPersonaResponse("La Persona buscada no se encuentra Registrada");
-            }
-
-        }
-        catch (Exception e)
         {
 
-            return new ConsultaPersonaResponse("Error de Aplicacion: " + e.Message);
+            try
+            {
+                List<Persona> personas = personaRepository.FiltrarSexo(sexo);
+                if (personas != null)
+                {
+                    return new ConsultaPersonaResponse(personas);
+                }
+                else
+                {
+                    return new ConsultaPersonaResponse("La Persona buscada no se encuentra Registrada");
+                }
+
+            }
+            catch (Exception e)
+            {
+
+                return new ConsultaPersonaResponse("Error de Aplicacion: " + e.Message);
+            }
         }
-    }
 
         public int ContarSexo(string sexo)
         {
@@ -161,13 +161,13 @@ namespace BLL
         }
 
 
-    
-
-}
 
 
+    }
 
-public class PersonaResponse 
+
+
+    public class PersonaResponse
     {
         public Persona Persona { get; set; }
         public string Message { get; set; }
@@ -185,8 +185,8 @@ public class PersonaResponse
             PersonaEncontrada = false;
         }
 
-       
-        
+
+
     }
     public class ConsultaPersonaResponse
     {
@@ -205,6 +205,6 @@ public class PersonaResponse
             Message = message;
             PersonaEncontrada = false;
         }
+    }
 }
 
-}

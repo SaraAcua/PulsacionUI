@@ -54,6 +54,7 @@
             this.TxtIdEliminar.Name = "TxtIdEliminar";
             this.TxtIdEliminar.Size = new System.Drawing.Size(134, 20);
             this.TxtIdEliminar.TabIndex = 2;
+            this.TxtIdEliminar.TextChanged += new System.EventHandler(this.TxtIdEliminar_TextChanged);
             this.TxtIdEliminar.DoubleClick += new System.EventHandler(this.TxtIdEliminar_DoubleClick);
             // 
             // button1

@@ -1,6 +1,7 @@
 ﻿using Entity;
 using System;
 using System.Collections.Generic;
+
 using System.IO;
 using System.Linq;
 
@@ -16,11 +17,11 @@ namespace DAL
             writer.WriteLine($"{persona.Identificacion};{persona.Nombre};{persona.Edad};{persona.Sexo};{persona.Pulsacion} ");
             writer.Close();
             file.Close();
-           
+
         }
         public Persona Buscar(string identificacion)
         {
-            List<Persona> personas =ConsultarTodos();
+            List<Persona> personas = ConsultarTodos();
             foreach (var item in personas)
             {
                 if (EsEncontrado(item.Identificacion, identificacion))
@@ -30,7 +31,7 @@ namespace DAL
             }
             return null;
         }
-        private bool EsEncontrado (string identificacioRegistrada, string identificacionBuscada)
+        private bool EsEncontrado(string identificacioRegistrada, string identificacionBuscada)
         {
             return identificacioRegistrada == identificacionBuscada;
         }
@@ -64,7 +65,7 @@ namespace DAL
         }
 
 
-        public void Eliminar(string identificacion) 
+        public void Eliminar(string identificacion)
         {
             List<Persona> personas = new List<Persona>();
             personas = ConsultarTodos();
@@ -76,7 +77,7 @@ namespace DAL
                 {
                     Guardar(item);
                 }
-                
+
             }
 
         }
@@ -172,6 +173,6 @@ namespace DAL
         {
             return ConsultarTodos().Where(p => p.Nombre.Contains(nombre)).ToList();
         }
-
     }
 }
+
