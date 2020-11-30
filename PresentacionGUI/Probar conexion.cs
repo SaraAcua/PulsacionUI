@@ -37,7 +37,7 @@ namespace PresentacionGUI
                     txtVersion.Text = "Versión del servidor: " + conexion.ServerVersion;
                     txtEstadoConexion.Text = "La conexion está: ";
                     txtEstadoConexion.Text += conexion.State.ToString();
-                    txtEstadoConexion.Text += "\nSe accede a la base de datos";
+                    txtEstadoConexion.Text += "\n Se accede a la base de datos";
                 }
                 catch (Exception ex)
                 {
