@@ -40,6 +40,8 @@
             this.CmbSexo = new System.Windows.Forms.ComboBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -107,7 +109,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 158);
+            this.label4.Location = new System.Drawing.Point(25, 186);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 19);
@@ -118,7 +120,7 @@
             // TxtPulsacion
             // 
             this.TxtPulsacion.Enabled = false;
-            this.TxtPulsacion.Location = new System.Drawing.Point(129, 187);
+            this.TxtPulsacion.Location = new System.Drawing.Point(129, 215);
             this.TxtPulsacion.Margin = new System.Windows.Forms.Padding(1);
             this.TxtPulsacion.Name = "TxtPulsacion";
             this.TxtPulsacion.Size = new System.Drawing.Size(216, 20);
@@ -129,7 +131,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 189);
+            this.label5.Location = new System.Drawing.Point(25, 217);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 19);
@@ -143,7 +145,7 @@
             this.CmbSexo.Items.AddRange(new object[] {
             "F",
             "M"});
-            this.CmbSexo.Location = new System.Drawing.Point(129, 156);
+            this.CmbSexo.Location = new System.Drawing.Point(129, 184);
             this.CmbSexo.Margin = new System.Windows.Forms.Padding(1);
             this.CmbSexo.Name = "CmbSexo";
             this.CmbSexo.Size = new System.Drawing.Size(216, 21);
@@ -158,7 +160,7 @@
             this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(143, 230);
+            this.BtnGuardar.Location = new System.Drawing.Point(143, 249);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(1);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(155, 43);
@@ -177,12 +179,34 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "REGISTRO DE USUARIO";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(25, 160);
+            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 19);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Email";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(129, 159);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(1);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(216, 20);
+            this.txtEmail.TabIndex = 14;
+            // 
             // FrmGestionPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(513, 343);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.CmbSexo);
@@ -219,5 +243,7 @@
         private System.Windows.Forms.ComboBox CmbSexo;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }

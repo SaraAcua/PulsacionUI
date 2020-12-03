@@ -14,7 +14,7 @@ namespace DAL
         {
             FileStream file = new FileStream(FileName, FileMode.Append);
             StreamWriter writer = new StreamWriter(file);
-            writer.WriteLine($"{persona.Identificacion};{persona.Nombre};{persona.Edad};{persona.Sexo};{persona.Pulsacion} ");
+            writer.WriteLine($"{persona.Identificacion};{persona.Nombre};{persona.Edad};{persona.Email};{persona.Sexo};{persona.Pulsacion} ");
             writer.Close();
             file.Close();
 
@@ -59,8 +59,9 @@ namespace DAL
             persona.Identificacion = matrizPersona[0];
             persona.Nombre = matrizPersona[1];
             persona.Edad = int.Parse(matrizPersona[2]);
-            persona.Sexo = matrizPersona[3];
-            persona.Pulsacion = Convert.ToDecimal(matrizPersona[4]);
+            persona.Email = matrizPersona[3];
+            persona.Sexo = matrizPersona[4];
+            persona.Pulsacion = Convert.ToDecimal(matrizPersona[5]);
             return persona;
         }
 

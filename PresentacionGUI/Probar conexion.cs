@@ -51,7 +51,7 @@ namespace PresentacionGUI
                     // Aunque la conexión estuviera cerrada,
                     // llamar a Close() no produce un error.
                     conexion.Close();
-                    txtEstadoConexion.Text += "\nAhora la conexion está: " +
+                    txtEstadoConexion.Text += "\n Ahora la conexion está: " +
                     conexion.State.ToString();
                 }
             }

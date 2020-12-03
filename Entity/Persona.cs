@@ -3,12 +3,13 @@ namespace Entity
 {
     public class Persona
     {
-        public Persona(string identificacion, string nombre, int edad, string sexo)
+        public Persona(string identificacion, string nombre, int edad, string email, string sexo)
         {
             Identificacion = identificacion;
             Nombre = nombre;
             Edad = edad;
             Sexo = sexo;
+            Email = email;
            
         }
 
@@ -23,6 +24,7 @@ namespace Entity
         public int Edad { get; set; }
         public string Sexo { get; set; }
         public decimal Pulsacion { get; set; }
+        public string Email { get; set; }
         public override string ToString()
         {
             return $"Identificacion: {Identificacion} - Nombre:{Nombre}-Edad:{Edad} -Sexo:{Sexo} -Pulsacion: {Pulsacion} ";

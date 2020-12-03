@@ -28,6 +28,7 @@ namespace PresentacionGUI
                 persona.Identificacion = TxtIdentificacion.Text;
                 persona.Nombre = TxtNombre.Text;
                 persona.Edad = Convert.ToInt32(TxtEdad.Text);
+                persona.Email = txtEmail.Text;
                 persona.Sexo = CmbSexo.Text;
                 persona.CalcularPulsacion();
                 TxtPulsacion.Text = persona.Pulsacion.ToString();

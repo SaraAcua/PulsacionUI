@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using DAL;
 using Entity;
+using Infraestructura;
+
 namespace BLL
 {
     public class PersonaService
@@ -15,12 +17,15 @@ namespace BLL
 
         public string Guardar(Persona persona)
         {
+            EnviarEmail email = new EnviarEmail();
+            string mensajeEmail = string.Empty;
             try
             {
 
                 if (personaRepository.Buscar(persona.Identificacion) == null)
                 {
                     personaRepository.Guardar(persona);
+                    mensajeEmail = email.EnviaEmail(persona);
                     return $"se han guardado Satisfactoriamente los datos de: {persona.Nombre} ";
                 }
                 else
